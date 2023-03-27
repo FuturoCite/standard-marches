@@ -1,0 +1,377 @@
+{
+    "title":"Marchés",
+    "description": "Spécification du standard des marchés",
+    "keywords": [
+        "marchés",
+        "commerces"
+    ],
+    "countryCode": "BE",
+    "licenses": [
+        {
+            "title": "Creative Commons",
+            "name": "CC-by 2.0 BE",
+            "path": "https://creativecommons.org/licenses/by/2.0/be/"
+        }
+    ],
+    "resources":[
+       {
+          "title":"Fichier valide (CSV)",
+          "name":"exemple-valide-csv",
+          "path":"https://raw.githubusercontent.com/FuturoCite/standard-marches/main/exemple-valide.csv"
+       }
+    ],
+    "author": "FuturoCité",
+    "contact": "https://www.futurocite.be/contact/demande-informations/",
+    "contributors": [
+        {
+            "organisation": "FuturoCité",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Marche-en-Famenne",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Idelux",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Liège",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Namur",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Walhain",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Bastogne",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de La Louvière",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Tournai",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Service public de Wallonie",
+            "role": "contributor"
+        },
+         {
+            "organisation": "Bureau Economique de la Province de Namur",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville d'Andenne",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Chaudfontaine",
+            "role": "contributor"
+        },
+           {
+            "organisation": "Ville de Hannut",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Intercommunale pour la Gestion et la Réalisation d'Etudes Techniques et Economiques",
+            "role": "contributor"
+        },
+        {
+            "organisation": "Ville de Mons",
+            "role": "contributor"
+        }
+    ],
+    "version": "0.1.0",
+    "created": "2023-03-30",
+    "updated": "2023-03-30",
+    "homepage": "https://github.com/FuturoCite/standard-marches",
+    "uri": "https://raw.githubusercontent.com/FuturoCite/standard-marches/main/schema.json",
+
+    "fields": [
+        {
+            "name": "id",
+            "title": "Identifiant",
+            "description": "Ce champ contient un identifiant unique local. Le producteur de données le génère en associant le code INS de la commune dans laquelle se tient le marché à un nombre. Ce champ permet d'éviter localement les doublons. Le code INS de la commune est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
+            "example": "62063-15",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "unique": true
+            }
+        },
+        {
+            "name": "name",
+            "title": "Nom",
+            "description": "Ce champ contient le nom du marché",
+            "example": "Marché de la Batte",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "description",
+            "title": "Description",
+            "description": "Ce champ est recommandé. Il contient une description du marché.",
+            "example": "Le marché de la Batte, communément appelé la Batte par les Liégeois, est un marché dominical, connu internationalement, situé le long de la rive gauche de la Meuse à Liège en Belgique. Wikipédia",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "type",
+            "title": "Type",
+            "description": "Ce champ précise le type de marché. Une valeur est possible parmi la liste suivante : Marché hebdomadaire, Marché de Noël, Brocante, Braderie, Marché thématique, Marché provençal, Marché de producteurs locaux, Marché bio, Marché artisanal, Marché aux fleurs, Autre.",
+            "example": "Marché de Noël",
+            "type": "string",
+            "constraints": {
+                "required": true, 
+                "enum" : ["Marché hebdomadaire", "Marché de Noël", "Brocante", "Braderie", "Marché thématique", "Marché provençal", "Marché de producteurs locaux", "Marché bio", "Marché artisanal", "Marché aux fleurs", "Autre"]
+            }
+        },
+        {
+            "name": "picture",
+            "title": "Photos",
+            "description": "Ce champ est optionnel. Il renseigne une ou plusieurs url renvoyant vers une ou des photos du marché. En cas de plusieurs url : elles doivent être séparées par un point virgule. ",
+            "example": "https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/images/marche-de-la-batte/la-batte-3-wxeb.jpg/@@images/image/large;https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/images/marche-de-la-batte/la-batte-1-ers-web.jpg/@@images/image/large;https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/images/marche-de-la-batte/la-batte-4-web.jpg/@@images/image/large",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "municipality",
+            "title": "Nom de la commune",
+            "description": "Ce champ contient le nom de la commune dans laquelle se situe le marché. Le nom de la commune provient de la base de données BeST Address : https://opendata.bosa.be/index.fr.html  ou de la liste des codes INS : https://statbel.fgov.be/fr/open-data/code-refnis ",
+            "example": "Liège",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "ins_code",
+            "title": "Code INS",
+            "description": "Ce champ contient le code INS de la commune où se situe le marché. Il est accessible ici :  https://statbel.fgov.be/fr/open-data/code-refnis ",
+            "example": "62063",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "pattern":"^\\d{5}$"
+            }
+        },
+        {
+            "name": "zone_address",
+            "title": "Partie de commune",
+            "description": "Ce champ continent le nom de la partie de commune où se situe le marché, conforme à l'appelation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+            "example": "liège",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "ins_zone_address",
+            "title": "Code INS de la partie de commune",
+            "description": "Ce champ contient le code INS de la partie de commune où se situe le marché. La découpe géographique de StatBel Level 5 (NIS6) liste ces codes : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+            "example": "62063A",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "street_name",
+            "title": "Nom de rue",
+            "description": "Ce champ renseigne le nom de la voirie où se situe le marché (ou de la voirie la plus proche du marché si elle n'est pas en voirie). Si le marché s'étend sur plusieurs voiries, nous recommandons d'introduire une voirie principale ou centrale.",
+            "example": "La Batte",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "street_number",
+            "title": "Code rue BeSTAddress",
+            "description": "Code de la voirie où se situe le marché dans la base de données BeSTAdress (ou de la voirie la plus proche du marché si elle n'est pas en voirie). Si le marché s'étend sur plusieurs voiries, nous recommandons d'introduire le code d'une voirie principale ou centrale. BeSTAdress : https://opendata.bosa.be/index.fr.html",
+            "example": "7729924",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "street_number_rrn",
+            "title": "Code rue national",
+            "description": "Code de la voirie où se situe le marché dans le registre national (ou de la voirie la plus proche du marché si elle n'est pas en voirie). Si le marché s'étend sur plusieurs voiries, nous recommandons d'introduire le code d'une voirie principale ou centrale.",
+            "example": "8701",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "house_number",
+            "title": "Numéro de police le plus proche",
+            "description": "Numéro de police le plus proche du marché. Dans le cas d'un marché intérieur, mettre le numéro du batiment principal. Si le marché s'étend sur une voirie, nous recommandons d'introduire un numéro central sur cette voirie. Si le marché s'étend sur plusieurs voiries, nous recommandons d'introduire un numéro centrale sur la voirie retenue pour l'encodage des champs précédents (Nom de rue, Code rue BeSTAddress, Code rue national).",
+            "example": "4",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "location_details",
+            "title": "Précisions sur l'emplacement",
+            "description": "Ce champ optionnel permet de donner des précisions sur l'emplacement du marché (son périmètre, les rues occupées, ...)",
+            "example": "Lieux du marché : Les quais Van Hoegaerden, Roosevelt, sur Meuse, de la Ribuée, de la Goffe, de la Batte, de Maestricht et la rue de la Cité",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "coordinates",
+            "title": "Coordonnées",
+            "description": "Ce champ indique les coordonnées du marché. Il respecte le format WGS 1984 (latitude,longitude). Ne pas mettre d'espace après la virgule. Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+            "example": "50.4712861231,4.8248565701",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        { 
+            "name": "geometry",
+            "title": "Geométrie",
+            "description": "Ce champ est recommandé. Il indique les coordonnées de la zone correspondante au marché. Il respecte le format WGS 1984 (latitude,longitude). Ne pas mettre d'espace après la virgule. Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+            "example": "{"coordinates": [5.581243820545143, 50.64590734864234], "type": "Point"}",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "contact",
+            "title": "Contact",
+            "description": "Informations de contact. Nous recommandons d'indiquer uniquement le site web du marché afin de faciliter la maintenance et mise à jour des données.",
+            "example": "https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/marche-de-la-batte",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "disabled_access",
+            "title": "Accessibilité PMR",
+            "description": "Ce champ est recommandé. Il indique si le marché est accessible aux personnes à mobilités réduites (valeur 'true') ou non (valeur 'false'). Si non applicable/non connu : ne pas renseigner ce champ.",
+            "example": "true",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "schedule",
+            "title": "Horaires",
+            "description": "Ce champ est recommandé. Il indique les horaires auquel le marché est accessible. Il respecte le format proposé par OpenStreetMap (https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours). L'outil YoHours (https://projets.pavie.info/yohours/) permet de générer des horaires au bon format. Le format OSM permet d'indiquer des exceptions pendant certaines périodes (vacances, jours fériés…). Pour les générer au bon format en utilisant YoHours, il suffit de les renseigner en cliquant sur le bouton 'plus' vert, situé en haut à gauche.",
+            "example": "Su 08:00-14:30",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        { 
+            "name": "begin_date",
+            "title": "Date de début",
+            "description": "Ce champ renseigne la date à partir de laquelle le marché est organisé. Le champ respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
+            "example": "2022-05-01",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+                "required": true
+            }
+        },
+        { 
+            "name": "end_date",
+            "title": "Date de fin",
+            "description": "Ce champ indique la date jusqu'à laquelle ce marché est organisé, si cette date est connue. Le champ respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
+            "example": "2022-09-30",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "covered",
+            "title": "Couvert",
+            "description": "Ce champ est recommandé. Il indique si le marché est couvert (valeur 'true') ou non (valeur 'false'). Si non connu : ne pas renseigner ce champ.",
+            "example": "false",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "provider",
+            "title": "Gestionnaire",
+            "description": "Ce champ est recommandé. Il permet de décrire le gestionnaire du marché.",
+            "example": "Ville de liège",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "presentation_url",
+            "title": "Présentation détaillée",
+            "description": "Précisions sur les commerçants habituellement présents sur le marché soit via une localisation sur plan des commerçants (url vers un pdf par exemple), soit via une page web décrivant les commerçants habituellement présents.",
+            "example": "https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/telechargements/plan-marche-batte-160112.pdf",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "number_of_stalls",
+            "title": "Nombre de vendeurs",
+            "description": "Ce champ précise le nombre approximatif d'échoppes.",
+            "example": "120",
+            "type": "number",
+            "constraints": {
+                "required": false
+            }
+        },
+         {
+            "name": "created_date",
+            "title": "Date de création de la donnée",
+            "description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
+            "example": "2021-11-03",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "last_modified_date",
+            "title": "Date de dernière modification de la donnée",
+            "description": "Ce champ indique la date de la dernière modification de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
+            "example": "2021-12-05",
+            "type": "date",
+            "format": "default",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "primaryKey":"id"
+}
