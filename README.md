@@ -148,75 +148,39 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
   </tr>
   <tr>
+   <td>Précisions sur l'emplacement
+   <br>(location_details)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ donne des précisions sur l'emplacement du marché.
+   </td>
+  </tr>
+  <tr>
    <td>Coordonnées 
    <br>(coordinates)
    </td>
     <td>Obligatoire
    </td>
-   <td>Ce champ indique les coordonnées de l'emplacement PMR. Il respecte le
-format WGS 1984 (latitude,longitude). Ne pas mettre d'espace après la virgule.
-Les coordonnées d'un lieu peuvent être générées ici :<a
-href="https://www.coordonnees-gps.fr/carte/pays/BE">
-https://www.coordonnees-gps.fr/carte/pays/BE</a>
+   <td>Ce champ indique les coordonnées du marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici :<ahref="https://www.coordonnees-gps.fr/carte/pays/BE">https://www.coordonnees-gps.fr/carte/pays/BE</a>
    </td>
   </tr>
   <tr>
-   <td>Nombre de places 
-   <br>(available_places)
+   <td>Géométrie 
+   <br>(geometry)
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ précise le nombre de places à disposition.
+   <td>Ce champ indique les coordonnées de la zone correspondante marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici :<ahref="https://www.coordonnees-gps.fr/carte/pays/BE">https://www.coordonnees-gps.fr/carte/pays/BE</a>
    </td>
-  </tr>
+  </tr>  
   <tr>
-   <td>Longueur 
-   <br>(length)
+   <td>Accessibilité PMR 
+   <br>(disabled_access)
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique la longueur, en mètres, de l'emplacement PMR. En cas de
-décimale, le séparateur est le point.
-   </td>
-  </tr>
-  <tr>
-   <td>Largeur 
-   <br>(width)
-   </td>
-    <td>Optionnel
-   </td>
-   <td>Ce champ indique la largeur, en mètres, de l'emplacement PMR. En cas de
-décimale, le séparateur est le point.
-   </td>
-  </tr>
-  <tr>
-   <td>Modalité 
-   <br>(modalities)
-   </td>
-    <td>Optionnel
-   </td>
-   <td>Ce champ décrit les modalités de réservation et informations des
-disponibilités de l'emplacement PMR.
-   </td>
-  </tr>
-  <tr>
-   <td>Disponibilité 
-   <br>(availability)
-   </td>
-    <td>Optionnel
-   </td>
-   <td>Ce champ précises si l'emplacement PMR est équipé de capteurs permettant
-d'accéder à des informations sur sa disponibilité en temps réels. Si l'emplacement est équipé de capteurs utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.
-   </td>
-  </tr>
-  <tr>
-   <td>Equipement 
-   <br>(equipment)
-   </td>
-    <td>Optionnel
-   </td>
-   <td>Ce champ décrit les équipements présents sur l'emplacement PMR : arceau
-vélo, bornes de rechargement, installations relatives à l'accessibilité, …
+   <td>Ce champ indique si le marché est accessible aux PMR.
    </td>
   </tr>
   <tr>
