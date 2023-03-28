@@ -252,7 +252,7 @@
             "name": "geometry",
             "title": "Geométrie",
             "description": "Ce champ est recommandé. Il indique les coordonnées de la zone correspondante au marché. Il respecte le format WGS 1984 (latitude,longitude). Ne pas mettre d'espace après la virgule. Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
-            "example": "{"coordinates": [5.581243820545143, 50.64590734864234], "type": "Point"}",
+            "example": "{"5.581243820545143, 50.64590734864234"}",
             "type": "string",
             "constraints": {
                 "required": false
