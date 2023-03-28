@@ -184,6 +184,69 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
   </tr>
   <tr>
+   <td>Horaires 
+   <br>(schedule)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ indique les horaires auxquels le marché est accessible. Il respecte le format proposé par OpenStreetMap (https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours). L'outil YoHours (https://projets.pavie.info/yohours/) permet de générer des horaires au bon format. Le format OSM permet d'indiquer des exceptions pendant certaines périodes (vacances, jours fériés…). Pour les générer au bon format en utilisant YoHours, il suffit de les renseigner en cliquant sur le bouton 'plus' vert, situé en haut à gauche. 
+   </td>
+  </tr>  
+  <tr>
+   <td>Date de début
+   <br>(begin_date)
+   </td>
+    <td>Obligatoire
+   </td>
+   <td>Ce champ indique la date à partir de laquelle ce marché est organisé.
+   </td>
+  </tr>  
+  <tr>
+   <td>Date de fin
+   <br>(end_date)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ indique la date jusqu'à laquelle le marché est organisé.
+   </td>
+  </tr>  
+  <tr>
+   <td>Couvert
+   <br>(covered)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ indique si le marché est couvert ou non.
+   </td>
+  </tr>  
+  <tr>
+   <td>Gestionnaire
+   <br>(provider)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ est recommandé. Il renseigne le gestionnaire du marché.
+   </td>
+  </tr>  
+  <tr>
+   <td>Présentation détaillée
+   <br>(presentation_url)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ permet de donner des précisions sur les commerçants habituellement présents sur le marché soit via une localisation sur plan des commerçants (url vers un pdf par exemple), soit via une page web décrivant les commerçants habituellement présents.
+   </td>
+  </tr>  
+  <tr>
+   <td>Nombre de vendeurs
+   <br>(number_of_stalls)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ indique le nombre approximatif de vendeurs présents sur le marché. 
+   </td>
+  </tr>    
+  <tr>
    <td>Date de création de la donnée 
    <br>(created_date)
    </td>
@@ -230,7 +293,7 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 * territoire : Nom du territoire concerné, non accentué (exemple : Liege)
 * extension : Si les règles de formatage sont respectées, l'extension est .csv
 
-Exemple : 2022-10-25_62063_emplacements-pmr_Liege.csv
+Exemple : 2023-01-25_62063_marches_Liege.csv
 
 ### Recommandations pour la mise en conformité 
 
