@@ -242,9 +242,18 @@
         {
             "name": "coordinates",
             "title": "Coordonnées",
-            "description": "Ce champ indique les coordonnées du marché. Il respecte le format WGS 1984 (latitude,longitude). Ne pas mettre d'espace après la virgule. Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
-            "example": "50.4712861231,4.8248565701",
-            "type": "string",
+            "description": "Ce champ indique les coordonnées du marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+            "example": {
+                 "type": "Feature",
+                 "geometry": {
+                       "type": "Point",
+                       "coordinates": [4.8248565701, 50.4712861231]
+                       },
+                 "properties": {
+                   "name": "un nom"
+                      }
+                    },                        
+            "type": "geojson",
             "constraints": {
                 "required": true
             }
@@ -252,9 +261,18 @@
         { 
             "name": "geometry",
             "title": "Geométrie",
-            "description": "Ce champ est recommandé. Il indique les coordonnées de la zone correspondante au marché. Il respecte le format WGS 1984 (latitude,longitude). Ne pas mettre d'espace après la virgule. Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
-            "example": "{"5.581243820545143, 50.64590734864234"}",
-            "type": "string",
+            "description": "Ce champ est recommandé. Il indique les coordonnées de la zone correspondante au marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+            "example": {
+                 "type": "Feature",
+                 "geometry": {
+                       "type": "LineString",
+                       "coordinates": [[4.964690032, 50.4809399829], [4.9642300332, 50.4809099744], [4.9639500463, 50.4809199495], [4.9632179411, 50.4810000256], [4.96217001, 50.4812100047]]
+                       },
+                 "properties": {
+                   "name": "un nom"
+                      }
+                    },            
+            "type": "geojson",
             "constraints": {
                 "required": false
             }
