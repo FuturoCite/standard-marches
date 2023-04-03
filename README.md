@@ -116,7 +116,7 @@ La tableau ci-dessous donne un aperçu des champs du schéma.
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ renseigne le nom de la voirie où se situe le marché (ou de la voirie la plus proche du marché s'il n'est pas en voirie).
+   <td>Ce champ renseigne le nom de la voirie principale où se situe le marché (ou de la voirie la plus proche du marché s'il n'est pas en voirie).
    </td>
   </tr>
   <tr>
@@ -125,7 +125,7 @@ La tableau ci-dessous donne un aperçu des champs du schéma.
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ contient le code de la voirie où se tient le marché dans la base de données BeSTAdress (ou de la voirie la plus proche du marché s'il ne se tient pas en voirie) :<ahref="https://opendata.bosa.be/index.fr.html">
+   <td>Ce champ contient le code de la voirie principale où se tient le marché dans la base de données BeSTAdress (ou de la voirie la plus proche du marché s'il ne se tient pas en voirie) :<ahref="https://opendata.bosa.be/index.fr.html">
 https://opendata.bosa.be/index.fr.html</a>
    </td>
   </tr>
@@ -174,6 +174,15 @@ https://opendata.bosa.be/index.fr.html</a>
    <td>Ce champ indique les coordonnées de la zone correspondante marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici :<ahref="https://www.coordonnees-gps.fr/carte/pays/BE">https://www.coordonnees-gps.fr/carte/pays/BE</a>
    </td>
   </tr>  
+  <tr>
+   <td>Contact 
+   <br>(contact)
+   </td>
+    <td>Optionnel
+   </td>
+   <td>Ce champ donne des informations de contact. Nous recommandons d'indiquer uniquement le site web du marché afin de faciliter la maintenance et la mise à jour des données. 
+   </td>
+  </tr>
   <tr>
    <td>Accessibilité PMR 
    <br>(disabled_access)
@@ -288,8 +297,8 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 Les fichiers doivent, sauf exception et autant que possible, respecter les règles de nommage suivantes :
 
 * YYYY-MM-DD : Date de création du fichier
-* idProducteur : code ISN unique de la commune pour identifier le producteur
-* emplacements-pmr : nom du fichier, en minuscules non accentuées
+* idProducteur : code INS unique de la commune pour identifier le producteur
+* marches : nom du fichier, en minuscules non accentuées
 * territoire : Nom du territoire concerné, non accentué (exemple : Liege)
 * extension : Si les règles de formatage sont respectées, l'extension est .csv
 
