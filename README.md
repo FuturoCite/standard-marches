@@ -203,7 +203,7 @@ https://opendata.bosa.be/index.fr.html</a>
   </tr>  
   <tr>
    <td>Date de début
-   <br>(begin_date)
+   <br>(start_date)
    </td>
     <td>Obligatoire
    </td>
