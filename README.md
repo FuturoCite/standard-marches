@@ -71,7 +71,7 @@ La tableau ci-dessous donne un aperçu des champs du schéma.
    </td>
    <td>Optionnel
    </td>
-   <td>Ce champ renvoie vers une ou plusieurs photos du circuit, grâce à des url. En cas de plusieurs url : elles doivent être séparées par un point virgule.
+   <td>Ce champ renvoie vers une ou plusieurs photos du marché, grâce à des url. En cas de plusieurs url : elles doivent être séparées par un point virgule.
    </td>
   </tr>  
   <tr>
