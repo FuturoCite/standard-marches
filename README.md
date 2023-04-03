@@ -180,7 +180,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique si le marché est accessible aux PMR.
+   <td>Ce champ indique si le marché est accessible aux PMR ou non. Les valeurs possibles sont true et false.
    </td>
   </tr>
   <tr>
@@ -216,7 +216,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique si le marché est couvert ou non.
+   <td>Ce champ indique si le marché est couvert ou non. Les valeurs possibles sont true et false.
    </td>
   </tr>  
   <tr>
