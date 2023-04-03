@@ -139,7 +139,7 @@
             }
         },
         {
-            "name": "picture",
+            "name": "pictures",
             "title": "Photos",
             "description": "Ce champ est optionnel. Il renseigne une ou plusieurs url renvoyant vers une ou des photos du marché. En cas de plusieurs url : elles doivent être séparées par un point virgule. ",
             "example": "https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/images/marche-de-la-batte/la-batte-3-wxeb.jpg/@@images/image/large;https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/images/marche-de-la-batte/la-batte-1-ers-web.jpg/@@images/image/large;https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/images/marche-de-la-batte/la-batte-4-web.jpg/@@images/image/large",
@@ -222,7 +222,7 @@
         {
             "name": "house_number",
             "title": "Numéro de police le plus proche",
-            "description": "Numéro de police le plus proche du marché. Dans le cas d'un marché intérieur, mettre le numéro du batiment principal. Si le marché s'étend sur une voirie, nous recommandons d'introduire un numéro central sur cette voirie. Si le marché s'étend sur plusieurs voiries, nous recommandons d'introduire un numéro centrale sur la voirie retenue pour l'encodage des champs précédents (Nom de rue, Code rue BeSTAddress, Code rue national).",
+            "description": "Numéro de police (= numéro de maison) le plus proche du marché. Dans le cas d'un marché intérieur, mettre le numéro du batiment principal. Si le marché s'étend sur une voirie, nous recommandons d'introduire un numéro central sur cette voirie. Si le marché s'étend sur plusieurs voiries, nous recommandons d'introduire un numéro centrale sur la voirie retenue pour l'encodage des champs précédents (Nom de rue, Code rue BeSTAddress, Code rue national).",
             "example": "4",
             "type": "string",
             "constraints": {
