@@ -98,7 +98,7 @@ La tableau ci-dessous donne un aperçu des champs du schéma.
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ continent le nom de la partie de commune où se tient le marché, conforme à l'appelation dans StatBel :<ahref="https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie">https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie</a>
+   <td>Ce champ contient le nom de la partie de commune où se tient le marché, conforme à l'appelation dans StatBel :<ahref="https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie">https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie</a>
    </td>
   </tr>
   <tr>
