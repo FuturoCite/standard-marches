@@ -172,7 +172,7 @@
         {
             "name": "zone_address",
             "title": "Partie de commune",
-            "description": "Ce champ continent le nom de la partie de commune où se situe le marché, conforme à l'appelation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+            "description": "Ce champ contient le nom de la partie de commune où se situe le marché, conforme à l'appelation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
             "example": "liège",
             "type": "string",
             "constraints": {
@@ -308,7 +308,7 @@
             }
         },
         { 
-            "name": "begin_date",
+            "name": "start_date",
             "title": "Date de début",
             "description": "Ce champ renseigne la date à partir de laquelle le marché est organisé. Le champ respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
             "example": "2022-05-01",
