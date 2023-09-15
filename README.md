@@ -1,5 +1,5 @@
 # standard-marches
-Il s'agit du standard wallon de publication sous condition Open Data des données relatives aux marchés en Wallonie 
+Il s'agit du standard wallon de publication sous condition Open Data des données relatives aux marchés en Wallonie. On entend par marchés : Marché hebdomadaire; Marché de Noël; Brocante; Braderie; Marché thématique; Marché provençal; Marché de producteurs locaux; Marché bio; Marché artisanal; Marché aux fleurs.
 
 ## Contexte
 
@@ -135,7 +135,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Code de la voirie où se situe le marché dans le registre national (ou de la voirie la plus proche du marché s'il ne se tient pas en voirie)
+   <td>Code de la voirie principale où se situe le marché dans le registre national (ou de la voirie la plus proche du marché s'il ne se tient pas en voirie)
    </td>
   </tr>
   <tr>
@@ -162,7 +162,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Obligatoire
    </td>
-   <td>Ce champ indique les coordonnées du marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici :<ahref="https://www.coordonnees-gps.fr/carte/pays/BE">https://www.coordonnees-gps.fr/carte/pays/BE</a>
+   <td>Ce champ indique les coordonnées du marché en se référent à l'adresse retenue pour l'encodage des champs précédents (Nom de rue, Code rue BeSTAddress, Code rue national, numéro de police). Il est au format GeoJSON (se référer au fichier csv d'exemple et/ou à la documentation pour un exemple de valeur bien formatée). S'il est impossible d'exporter la donnée depuis un logiciel métier, les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE
    </td>
   </tr>
   <tr>
@@ -171,7 +171,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique les coordonnées de la zone correspondante marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici :<ahref="https://www.coordonnees-gps.fr/carte/pays/BE">https://www.coordonnees-gps.fr/carte/pays/BE</a>
+   <td>Ce champ indique la zone géopgrahique du marché grâce à une liste de coordonnées. Cette liste est générée à partir d'un fichier GPX.
    </td>
   </tr>  
   <tr>
@@ -207,7 +207,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Obligatoire
    </td>
-   <td>Ce champ indique la date à partir de laquelle ce marché est organisé.
+   <td>Ce champ renseigne la date à partir de laquelle le marché est organisé. Le champ respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).
    </td>
   </tr>  
   <tr>
@@ -216,7 +216,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique la date jusqu'à laquelle le marché est organisé.
+   <td>Ce champ indique la date jusqu'à laquelle ce marché est organisé, si cette date est connue. Le champ respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).
    </td>
   </tr>  
   <tr>
@@ -225,7 +225,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique si le marché est couvert (valeur 'true') ou non (valeur 'false').
+   <td>Ce champ est recommandé. Il indique si le marché est couvert (valeur 'true') ou non (valeur 'false'). Si non connu : ne pas renseigner ce champ.
    </td>
   </tr>  
   <tr>
@@ -243,7 +243,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ permet de donner des précisions sur les commerçants habituellement présents sur le marché soit via une localisation sur plan des commerçants (url vers un pdf par exemple), soit via une page web décrivant les commerçants habituellement présents.
+   <td>Ce champ permet de donner des précisions sur les commerçants habituellement présents sur le marché soit via une localisation sur plan des commerçants (url vers un pdf par exemple), soit via une page web décrivant les commerçants habituellement présents. Ce champ contiendra donc une url.
    </td>
   </tr>  
   <tr>
@@ -252,7 +252,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel
    </td>
-   <td>Ce champ indique le nombre approximatif de vendeurs présents sur le marché. 
+   <td>Ce champ indique le nombre approximatif d'échoppes présentes sur le marché. 
    </td>
   </tr>    
   <tr>
@@ -261,8 +261,7 @@ https://opendata.bosa.be/index.fr.html</a>
    </td>
     <td>Optionnel (recommandé)
    </td>
-   <td>Ce champ indique la date de création de la donnée dans le jeu. Il
-respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)
+   <td>Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jourTheure:minute:seconde+02:00 (AAAA-MM-JJTHH:MM:SS-/+FF:ff). Si vous ne disposez pas de l'heure de création de la donnée, mettre "00:00:00+02:00".
    </td>
   </tr>
   <tr>
@@ -271,8 +270,7 @@ respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)
    </td>
     <td>Optionnel (recommandé)
    </td>
-   <td>Ce champ indique la date de la dernière modification de la donnée dans le
-jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).
+   <td>Ce champ indique la date de mise à jour de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jourTheure:minute:seconde+02:00 (AAAA-MM-JJTHH:MM:SS-/+FF:ff). Si vous ne disposez pas de l'heure de mise à jour de la donnée, mettre "00:00:00+02:00".
    </td>
   </tr>
 </table>
