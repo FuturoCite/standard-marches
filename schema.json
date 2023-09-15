@@ -89,9 +89,9 @@
             "role": "contributor"
         }
     ],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "created": "2023-03-30",
-    "updated": "2023-03-30",
+    "updated": "2023-09-15",
     "homepage": "https://github.com/FuturoCite/standard-marches",
     "uri": "https://raw.githubusercontent.com/FuturoCite/standard-marches/main/schema.json",
 
@@ -242,7 +242,7 @@
         {
             "name": "coordinates",
             "title": "Coordonnées",
-            "description": "Ce champ indique les coordonnées du marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+            "description": "Ce champ indique les coordonnées du marché en se référent à l'adresse retenue pour l'encodage des champs précédents (Nom de rue, Code rue BeSTAddress, Code rue national, numéro de police). Il est au format GeoJSON (se référer au fichier csv d'exemple et/ou à la documentation pour un exemple de valeur bien formatée). S'il est impossible d'exporter la donnée depuis un logiciel métier, les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
             "example": {
                  "type": "Feature",
                  "geometry": {
@@ -261,7 +261,7 @@
         { 
             "name": "geometry",
             "title": "Geométrie",
-            "description": "Ce champ est recommandé. Il indique les coordonnées de la zone correspondante au marché. Il respecte le format WGS 1984 (latitude,longitude). Les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+            "description": "Ce champ indique la zone géopgrahique du marché grâce à une liste de coordonnées. Cette liste est générée à partir d'un fichier GPX.",
             "example": {
                  "type": "Feature",
                  "geometry": {
@@ -352,7 +352,7 @@
         {
             "name": "presentation_url",
             "title": "Présentation détaillée",
-            "description": "Précisions sur les commerçants habituellement présents sur le marché soit via une localisation sur plan des commerçants (url vers un pdf par exemple), soit via une page web décrivant les commerçants habituellement présents.",
+            "description": "Précisions sur les commerçants habituellement présents sur le marché soit via une localisation sur plan des commerçants (url vers un pdf par exemple), soit via une page web décrivant les commerçants habituellement présents. Ce champ contiendra donc une url.",
             "example": "https://www.liege.be/fr/vie-communale/services-communaux/commerce/foires-et-marches/marches/telechargements/plan-marche-batte-160112.pdf",
             "type": "string",
             "constraints": {
@@ -362,7 +362,7 @@
         {
             "name": "number_of_stalls",
             "title": "Nombre de vendeurs",
-            "description": "Ce champ précise le nombre approximatif d'échoppes.",
+            "description": "Ce champ indique le nombre approximatif d'échoppes présentes sur le marché.",
             "example": "120",
             "type": "number",
             "constraints": {
@@ -372,9 +372,9 @@
          {
             "name": "created_date",
             "title": "Date de création de la donnée",
-            "description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
-            "example": "2021-11-03",
-            "type": "date",
+            "description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jourTheure:minute:seconde+02:00 (AAAA-MM-JJTHH:MM:SS-/+FF:ff). Si vous ne disposez pas de l'heure de création de la donnée, mettre "00:00:00+02:00".",
+            "example": "2022-02-05T08:45:03+02:00"",
+            "type": "datetime",
             "format": "default",
             "constraints": {
                 "required": false
@@ -383,9 +383,9 @@
         {
             "name": "last_modified_date",
             "title": "Date de dernière modification de la donnée",
-            "description": "Ce champ indique la date de la dernière modification de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
-            "example": "2021-12-05",
-            "type": "date",
+            "description": "Ce champ indique la date de mise à jour de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jourTheure:minute:seconde+02:00 (AAAA-MM-JJTHH:MM:SS-/+FF:ff). Si vous ne disposez pas de l'heure de mise à jour de la donnée, mettre "00:00:00+02:00".",
+            "example": "2023-09-15T08:45:03+02:00",
+            "type": "datetime",
             "format": "default",
             "constraints": {
                 "required": false
